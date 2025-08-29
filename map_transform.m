@@ -70,8 +70,10 @@ tolerance = 0.01;
 
 b_reduced_history = cell(1, CF.NumObjects);
 
-for k=1:CF.NumObjects
+for k = 1:CF.NumObjects
    b = boundaries{k};
+  
+
    b_reduced = reducepoly(b,tolerance);
 
    b_reduced_history{k} = b_reduced;
@@ -81,7 +83,7 @@ for k=1:CF.NumObjects
 end
 hold off;
 
-% Poligolization
+% Poligonalization
 
 figure;
 for i=1:CF.NumObjects 
